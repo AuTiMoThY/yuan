@@ -1,59 +1,43 @@
-# CodeIgniter 4 Framework
+# 元式生活-問卷網
 
-## What is CodeIgniter?
+前端切版
+後台管理系統製作
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+頁面:
+- 首頁
+- 問卷說明頁
+- 問卷表單頁
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+[這邊看展示 :)](https://yuan.clouduns.com/)
 
-## Important Change with index.php
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+# 使用技術
+## 全站
+- 使用Codeigniter 4框架
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## 前端開發
+- 網頁切版含RWD製作
+- 互動效果製作
+- 使用Vue3 composition API (非SFC)製作元件
+- 使用Vue3製作表單功能，包含必填判斷、取值與提交資料給API
+- 自定義的input range 樣式
+- 後台管理介面製作
 
-## Repository Management
+## 後端開發
+- 資料庫規劃
+- API程式撰寫
+- 對資料的查詢、排序操作
+- 資料狀態修改
+- 資料匯出CSV檔案
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+# 備註
+※ [後台連結](https://yuan.clouduns.com/yuanadmin)
 
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> **Warning**
-> The end of life date for PHP 7.4 was November 28, 2022. If you are
-> still using PHP 7.4, you should upgrade immediately. The end of life date
-> for PHP 8.0 will be November 26, 2023.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+# 展示
+<img width="1280" alt="首頁" src="https://portfolio.clouduns.com/au-portfolio/images/yuan.png">
+<img width="1280" alt="後台登入頁" src="https://portfolio.clouduns.com/au-portfolio/images/yuan-admin-login.png">
+<img width="1280" alt="後台資料頁" src="https://portfolio.clouduns.com/au-portfolio/images/yuan-admin-datatable.png">
