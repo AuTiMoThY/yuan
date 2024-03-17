@@ -1,0 +1,33 @@
+body {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: var(--main-color);
+    letter-spacing: 0.01em;
+    @extend .font-body;
+    &.js-dom_ready {
+        opacity: 1;
+    }
+}
+
+.body_wrap {
+    // position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.page_section {
+    padding-top: var(--spacing-half);
+    padding-bottom: var(--spacing-half);
+}
+
+.page_head {
+    padding-top: var(--spacing);
+    padding-bottom: var(--spacing-half);
+}
+
+a {
+    transition: all 0.3s ease-in-out;
+}

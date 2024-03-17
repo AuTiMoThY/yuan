@@ -1,0 +1,246 @@
+@keyframes changeIcon {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.question-item {
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: responsive-clamp(28, 8);
+        // aspect-ratio: 310 / 245;
+
+        border-radius: responsive-clamp(25, 10);
+        border: 2px solid color("gray1");
+        background-color: #{rgba(color(sub-color), 0)};
+        // padding: 20px;
+
+        transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+        @include media-down(576) {
+            border: 1px solid color("gray1");
+            // aspect-ratio: 85 / 78;
+            // gap: 6px;
+            // padding: 14px 10px 10px;
+            // border-radius: 10px;
+        }
+
+        &:active {
+            translate: 1px 1px;
+        }
+
+        .radio &,
+        .question-item-radio & {
+            padding: 0;
+            height: responsive-clamp(60, 30);
+            border-radius: 30px;
+
+            // @include media-down(576) {
+            //     line-height: 30px;
+            // }
+        }
+        // .question-item-radio & {
+        //     width: 200px;
+        // }
+        .checkbox-image & {
+            padding: 0;
+            aspect-ratio: 303 / 145;
+        }
+
+        [class*="form_input"]:checked + &,
+        &:hover {
+            border: 2px solid color("sub-color");
+            background-color: #{rgba(color(sub-color), 1)};
+            color: #fff;
+            @include media-down(576) {
+                border: 1px solid color("sub-color");
+            }
+
+            
+            .icon img {
+                animation: changeIcon 0.6s ease-in-out forwards;
+            }
+        }
+
+        @include media-down(576) {
+
+            [class*="form_input"] + &.hover_effect {
+                &::before {
+                    opacity: 0;
+                }
+            }
+        }
+        [class*="form_input"]:checked + &.hover_effect {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        .icon {
+            display: flex;
+            width: fit-content;
+            width: unquote("calc(150 / 310 * 100%)");
+
+            // @include media-down(768) {
+            //     width: 70px;
+            //     height: 50px;
+            // }
+            // @include media-down(576) {
+            //     width: 40px;
+            //     height: 30px;
+            // }
+        }
+
+        .label {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .row-3-parts & {
+        flex: 1 1 set-flex-basis(70, 3);
+    }
+    .row-2-parts & {
+        flex: 1 1 set-flex-basis(70, 2);
+
+        @include media-down(576) {
+            .q9 & {
+                flex: 1 1 100%;
+            }
+        }
+    }
+
+    &.radio-icon,
+    &.checkbox-icon {
+        .question-item-inner {
+            aspect-ratio: 310 / 245;
+
+            @include media-down(576) {
+                aspect-ratio: 85 / 78;
+            }
+
+            img {
+                aspect-ratio: 150 / 120;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &.radio {
+        max-width: responsive-clamp(320, 183);
+    }
+
+    &.select {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        flex: 0 0 auto;
+        @include media-down(576) {
+            flex: 0 0 100%;
+            justify-content: center;
+        }
+    }
+
+    &.checkbox-image {
+        position: relative;
+        .img {
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .form_label {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        @include media-down(576) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &.radio-bar {
+        .form_label {
+            position: relative;
+            padding-top: 19px;
+        }
+
+        .mark {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            translate: -50% 0;
+
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            border: 2px solid color("sub-color");
+            background-color: #fff;
+
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        [class*="form_input"]:checked ~ .mark {
+            opacity: 1;
+        }
+    }
+
+    &.text {
+        display: flex;
+        align-items: center;
+        gap: responsive-clamp(20, 5);
+
+        .form_label {
+            flex: 0 0 auto;
+        }
+
+        .form_input--text {
+            flex: 1 1 100%;
+        }
+
+        @include media-down(576) {
+            flex-direction: column;
+        }
+    }
+    &.row-part-text-2 {
+        flex: 1 1 set-flex-basis(50, 2);
+    }
+    &.row-part-text-1 {
+        flex: 1 1 100%;
+    }
+}
+
+.question-item-radios {
+    flex: 1 1 auto;
+
+    display: flex;
+    gap: responsive-clamp(32, 5);
+    // gap: 32px;
+
+    @include media-down(576) {
+        flex-direction: column;
+        width: 100%;
+        max-width: responsive-clamp(320, 183);
+    }
+
+    .question-item-radio {
+        flex: 1 1 set-flex-basis(32, 3);
+        @include media-down(576) {
+            flex: 1 1 100%;
+        }
+    }
+}

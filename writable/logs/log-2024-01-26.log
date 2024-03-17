@@ -1,0 +1,32 @@
+CRITICAL - 2024-01-26 10:04:40 --> Error: Call to undefined method App\Controllers\Frontend\Form::renderView()
+in APPPATH\Controllers\Frontend\Form.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Frontend\Form->homeAppliancesForm()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-26 10:05:32 --> Error: Call to undefined method App\Controllers\Frontend\Form::renderView()
+in APPPATH\Controllers\Frontend\Form.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Frontend\Form->homeAppliancesForm()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-26 10:06:09 --> Error: Call to undefined method App\Controllers\Frontend\Form::renderView()
+in APPPATH\Controllers\Frontend\Form.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Frontend\Form->homeAppliancesForm()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-26 10:16:34 --> ErrorException: Undefined variable $postData
+in APPPATH\Controllers\Frontend\Form.php on line 89.
+ 1 APPPATH\Controllers\Frontend\Form.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $postData', 'D:\\auproject\\20231227-yuan\\yuan-build-ci4\\app\\Controllers\\Frontend\\Form.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Frontend\Form->submitHomeAppliances()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-26 10:17:50 --> ErrorException: Undefined variable $postData
+in APPPATH\Controllers\Frontend\Form.php on line 89.
+ 1 APPPATH\Controllers\Frontend\Form.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $postData', 'D:\\auproject\\20231227-yuan\\yuan-build-ci4\\app\\Controllers\\Frontend\\Form.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Frontend\Form->submitHomeAppliances()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

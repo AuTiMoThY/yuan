@@ -1,0 +1,17 @@
+.page-form {
+    .page_heading {
+        background-size: cover;
+        background-position: 0% 0%;
+        background-image: url(../images/banner-bg-2.jpg);
+        @include media-down(768) {
+            // height: auto;
+            // aspect-ratio: 375 / 471;
+            background-image: url(../images/banner-bg-mb-2.jpg);
+        }
+
+        .title {
+            font-size: responsive-clamp(35, 17);
+            line-height: responsive-clamp(50, 25);
+        }
+    }
+}

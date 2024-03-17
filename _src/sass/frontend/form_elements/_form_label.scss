@@ -1,0 +1,9 @@
+.form_label {
+    display: block;
+    cursor: pointer;
+
+    .label {
+        font-size: responsive-clamp(22, 15);
+        line-height: responsive-clamp(31, 21);
+    }
+}

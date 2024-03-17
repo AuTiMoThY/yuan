@@ -1,0 +1,181 @@
+%commonZindex {
+    position: relative;
+    z-index: 2;
+}
+
+%fieldEffect {
+    @include psudoClass;
+    @include absolute(0, $L: 0);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 2px solid color("main-color");
+    border-radius: $border-radius-base;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.#{$PROJECT_NAME}_field {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    &-v {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &-label {
+        flex: 0 0 auto;
+        z-index: 3;
+        margin-bottom: 0;
+        // min-width: 100px;
+
+        // color: color("Gray-00");
+        &:after {
+            .required & {
+                content: '*';
+                display: inline;
+                margin-left: 0.3rem;
+                color: #FF3434;
+            }
+        }
+    }
+
+    &-block {
+        width: 100%;
+    }
+
+    &-ctrler {
+        position: relative;
+        width: 100%;
+        border-radius: $border-radius-base;
+
+        .js-select-focus & {
+            z-index: 99;
+        }
+
+        &::before {
+            @extend %fieldEffect;
+
+            .js-focus &,
+            .js-select-focus & {
+                // z-index: 99;
+                opacity: 1;
+                animation-name: enlarge;
+                animation-duration: 1.5s;
+                animation-fill-mode: both;
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+            }
+        }
+
+        &::after {
+            @extend %fieldEffect;
+
+            .js-focus &,
+            .js-select-focus & {
+
+                // z-index: 99;
+                opacity: 1;
+            }
+        }
+    }
+    &.date_field {
+        .icon {
+            @include absolute(50%, 0.5rem);
+            z-index: 10;
+            // @include wh(10, 6);
+            transform: translateY(-50%);
+            // color: color("gray1");
+        }
+    }
+
+    &.password_field {
+        .#{$PROJECT_NAME}_field-ctrler {
+            display: flex;
+            background-color: #fff;
+            border-radius: $border-radius-base;
+        }
+        
+        .form-control {
+            // border-radius: $border-radius-base 0 0 $border-radius-base;
+        }
+
+        .toggle_password_btn {
+            width: 45px;
+            border: none;
+            background-color: transparent;
+            transition: $transition-base;
+            border-radius: 0 $border-radius-base $border-radius-base 0;
+            color: color("Gray-04");
+            &:hover {
+                background-color: color("Gray-02");
+            }
+        }
+    }
+
+
+    &.has-error {
+        .#{$PROJECT_NAME}_field-ctrler {
+            border: 1px solid color("danger");
+
+            .form-control {
+                &::placeholder {
+                    color: color("danger");
+                }
+                &::-webkit-input-placeholder {
+                    /* Chrome/Opera/Safari */
+                    color: color("danger");
+                }
+                
+                &::-moz-placeholder {
+                    /* Firefox 19+ */
+                    color: color("danger");
+                }
+                
+            }
+        }
+    }
+
+}
+.error-msg {
+    padding-top: 0.5rem;
+    // @include remCalc(font-size, 14);
+    font-size: #{px-to-rem(14)}rem;
+    color: color("danger");
+    &:empty {
+        display: none;
+    }
+}
+
+
+// .#{$PROJECT_NAME}_field {
+
+
+//     &-prepend {
+//         @extend %commonZindex;
+//     }
+//     &-append {
+//         @extend %commonZindex;
+//         // display: flex;
+//     }
+//     &-input {
+//         @extend %commonZindex;
+//     }
+
+//     &.js-error {
+//         border-color: color("error");
+//     }
+
+//     &.date_field {
+//         .icon {
+//             @include absolute(50%, 0.5rem);
+//             z-index: 10;
+//             // @include wh(10, 6);
+//             transform: translateY(-50%);
+//             color: color("Gray-04");
+//         }
+//     }
+// }

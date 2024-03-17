@@ -1,0 +1,54 @@
+
+
+:root {
+    --spacing: 104px;
+    --spacing-half: calc(104px / 2);
+
+    @media screen and (max-width: 768px) {
+        --spacing: 56px;
+        --spacing-half: calc(56px / 2);
+    }
+}
+
+:root {
+    --main-color: #{color('main-color')};
+    --sub-color: #{color('sub-color')};
+    // --text-btn: #{color('text-btn')};
+    --gray1: #{color('gray1')};
+    // --text-sub: #{color('text-sub')};
+}
+
+:root {
+    --font-h1:    #{responsive-clamp(60, 24)};
+    --font-h2:    #{responsive-clamp(40, 20)};
+    --font-h3:    #{responsive-clamp(35, 15)};
+    --font-body:  #{responsive-clamp(22, 15)};
+    --font-small: #{responsive-clamp(26, 12)};
+
+    // @debug responsive-font-size(60, 40);
+
+
+    // @media screen and (max-width: 768px) {
+    //     --font-h1: #{px-to-rem(48)}rem;
+    //     --font-h2: #{px-to-rem(32)}rem;
+    //     --font-h3: #{px-to-rem(28)}rem;
+    //     --font-body: #{px-to-rem(16)}rem;
+    //     --font-small: #{px-to-rem(14)}rem;
+    // }
+    // @media screen and (max-width: 576px) {
+    //     --font-h1: #{px-to-rem(32)}rem;
+    //     --font-h2: #{px-to-rem(24)}rem;
+    //     --font-h3: #{px-to-rem(18)}rem;
+    //     --font-body: #{px-to-rem(16)}rem;
+    //     --font-small: #{px-to-rem(14)}rem;
+    // }
+    // @media screen and (max-width: 375px) {
+    //     --font-h1: #{px-to-rem(24)}rem;
+    //     --font-h2: #{px-to-rem(15)}rem;
+    //     --font-h3: #{px-to-rem(15)}rem;
+    //     --font-body: #{px-to-rem(12)}rem;
+    //     --font-small: #{px-to-rem(9)}rem;
+    // }
+}
+
+

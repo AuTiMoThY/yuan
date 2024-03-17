@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    padding-left: responsive-clamp(154, 37);
+    padding-right: responsive-clamp(154, 37);
+
+
+    // @media screen and (max-width: 1600px) {
+    //     width: auto;
+    //     max-width: 100%;
+    //     margin-left: 104px;
+    //     margin-right: 104px;
+    // }
+    // @media screen and (max-width: 1280px) {
+    //     margin-left: 40px;
+    //     margin-right: 40px;
+    // }
+    // @media screen and (max-width: 576px) {
+    //     margin-left: calc((36 / 375) * 100%);
+    //     margin-right: calc((36 / 375) * 100%);
+    // }
+    // @media screen and (max-width: 375px) {
+    //     margin-left: 16px;
+    //     margin-right: 16px;
+    // }
+}

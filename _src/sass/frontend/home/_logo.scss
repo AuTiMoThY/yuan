@@ -1,0 +1,8 @@
+.logo-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    padding-top: responsive-clamp(65, 32);
+}

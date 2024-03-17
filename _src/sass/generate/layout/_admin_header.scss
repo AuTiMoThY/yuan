@@ -1,0 +1,10 @@
+.admin_header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 1rem;
+    background-color: color("main-color");
+    .logo {
+        width: 150px;
+    }
+}

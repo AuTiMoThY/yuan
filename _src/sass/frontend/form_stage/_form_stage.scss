@@ -1,0 +1,56 @@
+.form_stage {
+    padding-top: 74px;
+    padding-bottom: 120px;
+
+    @include media-down(768) {
+        padding-top: 20px; 
+        padding-bottom: 20px;
+    }
+
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 160px;
+        width: #{1920 - (290 * 2)}px;
+        margin: auto;
+        padding: 0;
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        list-style: none;
+
+        @include media-down(1600) {
+            width: 100%;
+        }
+
+        @include media-down(768) {
+            gap: 45px;
+            padding-top: 20px;
+            padding-bottom: 35px;
+        }
+    }
+
+    .stage_title {
+        @extend .txt-gray1;
+    }
+
+    .link {
+        padding-top: 15px;
+        margin: auto;
+        &-txt {
+            font-size: responsive-clamp(16, 12);
+            color: var(--main-color);
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        @include media-down(576) {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}

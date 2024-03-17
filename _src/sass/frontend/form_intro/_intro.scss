@@ -1,0 +1,178 @@
+.page-intro {
+    display: flex;
+    height: auto;
+    min-height: 100vh;
+
+    @include media-down(1024) {
+        flex-direction: column;
+        // height: auto;
+    }
+
+    @include media-down(576) {
+        min-height: auto;
+
+    }
+    .intro {
+        position: relative;
+        width: 50%;
+        // height: calc(100vh - 103px);
+
+        background-size: cover;
+        background-position: 0% 0%;
+        background-image: url(../images/banner-bg.jpg);
+
+        color: #fff;
+        @include media-down(1024) {
+            width: 100%;
+            height: auto;
+        }
+
+        @include media-down(768) {
+            // height: auto;
+            // aspect-ratio: 375 / 471;
+            background-image: url(../images/banner-bg-mb-2.jpg);
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: responsive-clamp(60, 35);
+            width: auto;
+            height: 100%;
+
+            padding-top: responsive-clamp(65, 32);
+            padding-bottom: responsive-clamp(104, 35);
+            padding-left: responsive-clamp(140, 37);
+            padding-right: responsive-clamp(140, 37);
+            
+
+            // @include media-down(1024) {
+            //     padding-top: 104px;
+            //     padding-bottom: 104px;
+            // }
+
+            // @include media-down(576) {
+            //     // gap: 60px;
+            //     padding-top: calc(40px + 45px);
+            //     padding-bottom: calc(40px + 45px);
+            // }
+            // @include media-down(375) {
+            //     // gap: 45px;
+            //     padding-top: 65px;
+            //     padding-bottom: 45px;
+            // }
+        }
+
+        .page_title {
+            padding-top: responsive-clamp(35, 5);
+            font-size: responsive-clamp(35, 17);
+            line-height: responsive-clamp(50, 28);
+            // padding-top: calc(125 / 1080 * 100%);
+            // @include media-down(375) {
+            //     font-size: 15px;
+            //     line-height: 21px;
+            // }
+        }
+
+        .txt {
+            font-size: responsive-clamp(22, 15);
+            line-height: responsive-clamp(43, 28);
+        }
+
+        .txt2 {
+            position: relative;
+            height: responsive-clamp(283, 148);
+            font-size: responsive-clamp(35, 20);
+            line-height: responsive-clamp(75, 35);
+
+            // @include
+
+            &-inner {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                white-space: nowrap;
+            }
+
+            &::before, &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: responsive-clamp(47, 25);
+                height: responsive-clamp(50, 40);
+                background-image: url(../images/icon-quote.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &::before {
+                top: 0;
+                left: 0;
+            }
+            &::after {
+                bottom: 0;
+                right: 0;
+
+                transform: rotate(180deg);
+            }
+        }
+
+        &.form-homeAppliances {
+            .txt {
+                max-width: 524px;
+            }
+        }
+        
+        &.form-groupBuying {
+            .txt {
+                max-width: 355px;
+            }
+        }
+
+        .link-txt {
+            color: #fff;
+            font-size: responsive-clamp(26, 14);
+        }
+
+        &-ft {
+            display: none;
+            @include media-down(1024) {
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 23px;
+                padding-bottom: 23px;
+
+                .container {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    .video {
+        position: relative;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        width: 50%;
+        min-height: 100%;
+
+        overflow: hidden;
+
+        &-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+
+        @include media-down(1024) {
+            position: relative;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 375 / 600;
+        }
+    }
+}

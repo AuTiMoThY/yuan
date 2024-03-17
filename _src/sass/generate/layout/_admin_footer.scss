@@ -1,0 +1,11 @@
+.admin_footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    display: flex;
+    justify-content: flex-end;
+
+    .copyright {
+        font-size: #{px-to-rem(14)}rem;
+    }
+}

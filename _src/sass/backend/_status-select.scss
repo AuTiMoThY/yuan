@@ -1,0 +1,27 @@
+.yuan_select {
+    // padding: 8px 16px;
+    // padding-left: 8px;
+
+    &.status-done {
+        border: none;
+        background-color: #29A362;
+        .yuan_select-select, .yuan_select-icon {
+            color: #fff;
+        }
+        option {
+            background-color: #fff;
+            color: color(main-color);
+        }
+    }
+    &.status-close {
+        border: none;
+        background-color: #47454A;
+        .yuan_select-select, .yuan_select-icon {
+            color: #fff;
+        }
+        option {
+            background-color: #fff;
+            color: color(main-color);
+        }
+    }
+}

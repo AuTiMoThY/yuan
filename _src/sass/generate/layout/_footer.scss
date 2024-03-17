@@ -1,0 +1,20 @@
+.site_footer {
+    background-color: var(--main-color);
+    color: #fff;
+
+    font-size: responsive-clamp(15, 12);
+    font-family: 'Noto Sans TC', sans-serif;
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.social_btns {
+    display: flex;
+    gap: 1rem;
+}
