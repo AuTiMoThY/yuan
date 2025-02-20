@@ -21,6 +21,8 @@
 
 ## 🛠 技術
 ### 前端
+- Gulp 自動化工具
+- SCSS 樣式處理
 - Vue 3 (Composition API)
 - RWD響應式設計
 - 客製化表單元件
@@ -28,7 +30,7 @@
 
 ### 後端
 - CodeIgniter 4
-- MySQL/MariaDB
+- MySQL
 - RESTful API
 
 ## 📸 系統展示
