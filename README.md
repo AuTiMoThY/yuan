@@ -1,59 +1,43 @@
-# CodeIgniter 4 Framework
+# 元式生活-問卷網
 
-## What is CodeIgniter?
+## 📝 專案簡介
+一個使用 CodeIgniter 4 框架開發的問卷調查系統，包含前台問卷填寫及後台管理功能。
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## 🔗 相關連結
+- [前台網站](https://demo-yuan.auozzy.com/)
+- [後台管理](https://demo-yuan.auozzy.com/demoadmin)
+  - 測試帳號：demo
+  - 測試密碼：demo
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## ✨ 功能特點
+- 前台功能
+  - 問卷填寫
+  - 表單驗證
+  - 客製化介面
+- 後台功能
+  - 問卷管理
+  - 資料查詢與排序
+  - CSV資料匯出
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## 🛠 技術
+### 前端
+- Vue 3 (Composition API)
+- RWD響應式設計
+- 客製化表單元件
+- 互動效果設計
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+### 後端
+- CodeIgniter 4
+- MySQL/MariaDB
+- RESTful API
 
-## Important Change with index.php
+## 📸 系統展示
+### 前台首頁
+![首頁](https://demo.auozzy.com/picture/yuan-index.png)
+![表單](https://demo.auozzy.com/picture/yuan-form-1.png)
+![表單](https://demo.auozzy.com/picture/yuan-form-2.png)
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+### 後台介面
+![後台登入頁](https://portfolio.clouduns.com/au-portfolio/images/yuan-admin-login.png)
+![後台資料頁](https://portfolio.clouduns.com/au-portfolio/images/yuan-admin-datatable.png)
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> **Warning**
-> The end of life date for PHP 7.4 was November 28, 2022. If you are
-> still using PHP 7.4, you should upgrade immediately. The end of life date
-> for PHP 8.0 will be November 26, 2023.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library

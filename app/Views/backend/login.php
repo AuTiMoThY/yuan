@@ -42,9 +42,6 @@
         </div>
 
     </main>
-    <?php
-    // var_dump(password_hash("demo", PASSWORD_DEFAULT));
-    ?>
 
     <!-- /.page_main END  !! -->
     <!-- =========================================================================-->
