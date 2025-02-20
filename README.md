@@ -33,11 +33,11 @@
 
 ## 📸 系統展示
 ### 前台首頁
-![首頁](https://demo.auozzy.com/picture/yuan-index.png)
-![表單](https://demo.auozzy.com/picture/yuan-form-1.png)
-![表單](https://demo.auozzy.com/picture/yuan-form-2.png)
+![首頁](https://demo.auozzy.com/picture/yuan-index.jpg)
+![表單](https://demo.auozzy.com/picture/yuan-form-1.jpg)
+![表單](https://demo.auozzy.com/picture/yuan-form-2.jpg)
 
 ### 後台介面
-![後台登入頁](https://portfolio.clouduns.com/au-portfolio/images/yuan-admin-login.png)
-![後台資料頁](https://portfolio.clouduns.com/au-portfolio/images/yuan-admin-datatable.png)
+![後台登入頁](https://portfolio.clouduns.com/au-portfolio/images/yuan-admin-login.jpg)
+![後台資料頁](https://portfolio.clouduns.com/au-portfolio/images/yuan-admin-datatable.jpg)
 
