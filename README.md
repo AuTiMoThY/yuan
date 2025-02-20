@@ -21,9 +21,9 @@
 
 ## 🛠 技術
 ### 前端
-- Gulp 自動化工具
-- SCSS 樣式處理
 - Vue 3 (Composition API)
+- SCSS 樣式處理
+- Gulp 自動化工具
 - RWD響應式設計
 - 客製化表單元件
 - 互動效果設計
