@@ -1,0 +1,93 @@
+.form_entrance {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        translate: -50% 0;
+        content: "";
+        display: block;
+        width: 4px;
+        height: 100%;
+        background-color: #fff;
+
+        @include media-down(1024) {
+            width: 100%;
+            height: 4px;
+            top: 50%;
+            left: 0;
+            translate: 0 -50%;
+        }
+    }
+
+    .entrance {
+        position: relative;
+        flex: 1 1 50%;
+        aspect-ratio: 960 / 990;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include media-down(1024) {
+            flex: 1 1 100%;
+        }
+
+        &-txt {
+            position: absolute;
+            bottom: responsive-clamp(85, 30);
+            width: 100%;
+            color: #fff;
+
+            &-inner {
+                position: relative;
+                width: math.div(664px, 960px) * 100%;
+                padding: responsive-clamp(30, 10);
+                padding-left: math.div(152px, 960px) * 100%;
+                background: linear-gradient(
+                    to right,
+                    #102543 0%,
+                    rgba(16, 37, 67, 0.97) 0%,
+                    rgba(16, 37, 67, 0.85) 46.29%,
+                    rgba(16, 37, 67, 0) 100%
+                );
+
+                @include media-down(576) {
+                    // padding-left: 24px;
+                    width: math.div(258px, 375px) * 100%;
+                    padding-left: math.div(36px, 258px) * 100%;
+                }
+                .title {
+                    font-size: responsive-clamp(40, 17);
+                    line-height: responsive-clamp(75, 28);
+                    font-weight: 600;
+                    letter-spacing: 0.01em;
+                }
+                .txt {
+                    font-size: responsive-clamp(22, 15);
+                    line-height: responsive-clamp(31, 21);
+                    font-weight: normal;
+                }
+            }
+
+            // @include media-down(576) {
+            //     padding-left: 24px;
+            // }
+        }
+
+        &-arrow {
+            position: absolute;
+            top: 50%;
+            right: math.div(70px, 960px) * 100%;
+            translate: 0 -50%;
+            width: responsive-clamp(106, 53);
+            height: responsive-clamp(106, 53);
+            background-image: url(../images/entrance-arrow.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}

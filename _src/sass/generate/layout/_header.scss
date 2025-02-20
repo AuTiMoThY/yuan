@@ -1,0 +1,38 @@
+.site_header {
+    position: relative;
+    z-index: 1;
+    height: 0;
+
+    .container {
+        position: relative;
+    }
+}
+
+.logo {
+    // position: absolute;
+    // top: responsive-clamp(65, 32);
+
+    // @include media-down(768) {
+    //     top: 56px;
+    // }
+    // @include media-down(576) {
+    //     top: 40px;
+    // }
+    // @include media-down(375) {
+    //     top: 32px;
+    // }
+    img {
+        width: responsive-clamp(242, 120);
+        aspect-ratio: 242 / 60;
+
+        // @include media-down(768) {
+        //     width: 230px;
+        // }
+        // @include media-down(576) {
+        //     width: 180px;
+        // }
+        // @include media-down(375) {
+        //     width: 120px;
+        // }
+    }
+}

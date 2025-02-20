@@ -1,0 +1,66 @@
+.tool_bar{
+    display: flex;
+    gap: 40px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: color(Gray-01);
+    .dp__main {
+        min-height: 100%;
+        > div {
+            height: 100%;
+        }
+    }
+    .dp__input_wrap {
+        height: 100%;
+    }
+
+    .dp__pointer {
+        height: 100%;
+    }
+
+    .dp__action_row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .dp__action_buttons {
+        margin: 0;
+    }
+    .dp__action_button {
+        padding: 0.5rem 1rem;
+        height: auto;
+    }
+
+    .tool {
+        position: relative;
+        flex: 1 1 set-flex-basis(40, 2);
+        // background-color: #{rgba(color(main-color), 0.3)};
+
+        // border: 1px solid color(Gray-02);
+
+        &-title {
+            margin-bottom: 8px;
+            // position: absolute;
+            // top: -15px;
+            // padding: 1px 5px;
+            // background-color: #fff;
+            // border-radius: 4px;
+        }
+
+        &-ctrl {
+            display: flex;
+            gap: 16px;
+            // height: 100%;
+
+            .yuan_btn {
+                flex: 0 0 auto;
+            }
+        }
+    }
+}
+
+.filter-select, .date_range-select {
+    flex: 1 1 auto;
+    padding: 8px 16px;
+    padding-left: 8px;
+    appearance: none;
+}

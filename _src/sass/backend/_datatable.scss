@@ -1,0 +1,55 @@
+%action_cell {
+    width: 150px;
+    text-align: center;
+}
+%status_cell {
+    width: 200px;
+    text-align: center;
+}
+.datatable {
+    min-width: 1300px;
+    width: 100%;
+
+
+    &-heading, &-cell {
+        padding: 1rem 1rem;
+        &:first-of-type {
+            width: 100px;
+        }
+    }
+
+    &-heading {
+        border-bottom: 1px solid color("sub-color");
+
+        &.action {
+            @extend %action_cell;
+        }
+
+        &.status {
+            @extend %status_cell;
+        }
+
+        &.sortable {
+            cursor: pointer;
+        }
+    }
+
+    &-cell {
+
+        &.action {
+            @extend %action_cell;
+        }
+
+        &.status {
+            @extend %status_cell;
+        }
+    }
+
+    tr {
+        &:hover {
+            .datatable-cell {
+                background-color: color(Gray-01);
+            }
+        }
+    }
+}

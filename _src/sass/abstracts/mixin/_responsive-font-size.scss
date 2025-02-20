@@ -1,0 +1,16 @@
+@mixin responsive-font-size($size-large, $size-small) {
+    // 视口宽度变化范围
+    $viewport-large: 1920px; // 宽屏
+    $viewport-small: 375px; // 窄屏
+
+    // 计算线性方程参数
+    $slope: ($size-large - $size-small) / ($viewport-large - $viewport-small);
+    $base: $size-large - $slope * $viewport-large;
+
+    // 生成 CSS
+    font-size: clamp(
+        $size-small,
+        calc(#{$slope * 100vw} + #{$base}px),
+        $size-large
+    );
+}

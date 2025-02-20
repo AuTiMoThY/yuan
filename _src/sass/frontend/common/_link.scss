@@ -1,0 +1,91 @@
+.link {
+    position: relative;
+    display: block;
+    width: responsive-clamp(155, 82);
+    height: responsive-clamp(46, 30);
+
+    border: none;
+    background-color: transparent;
+
+    &-txt {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        translate: calc(-50% - responsive-clamp(8, 5));
+        word-break: keep-all;
+
+        font-family: "Noto Sans TC", sans-serif;
+
+        font-weight: normal;
+        letter-spacing: 0.08em;
+        line-height: #{responsive-clamp(36, 21)};
+
+    }
+
+    &-icon {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        animation-name: auto-scale;
+        animation-duration: 1s;
+        animation-timing-function: $easeInOutCubic;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        .icon {
+            display: block;
+            width: 100%;
+            aspect-ratio: 157 / 23;
+            background-image: url(../images/link-arrow.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &:hover {
+        path {
+            stroke: #fff;
+        }
+    }
+
+    // &-icon {
+    //     position: absolute;
+    //     bottom: 0;
+
+    //     overflow: hidden;
+    //     width: 0;
+
+    //     svg {
+    //         display: block;
+    //         // width: responsive-clamp(116, 59);
+    //         width: 155px;
+    //         height: 20px;
+    //         // aspect-ratio: 118 / 22;
+    //         // @media screen and (max-width: 375px) {
+    //         //     width: 63px;
+    //         // }
+
+    //     }
+    // }
+
+    &.go_next_stage,
+    &.send {
+        path {
+            stroke: color("main-color");
+        }
+
+        &:hover {
+            path {
+                stroke: color("sub-color");
+            }
+        }
+    }
+}
+
+@keyframes auto-scale {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

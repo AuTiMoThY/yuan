@@ -1,0 +1,16 @@
+.pagination {
+    display: flex;
+    gap: 16px;
+    padding: 32px;
+    &-btn {
+        padding: 8px 16px;
+        border: 1px solid color(sub-color);
+        background-color: #fff;
+
+        transition: all 0.3s $easeInOutCubic3;
+        &:hover, &.active {
+            background-color: color(sub-color);
+            color: #fff;
+        }
+    }
+}

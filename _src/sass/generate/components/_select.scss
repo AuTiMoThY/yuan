@@ -1,0 +1,29 @@
+.#{$PROJECT_NAME}_select {
+    position: relative;
+    z-index: 11;
+    width: 100%;
+    cursor: pointer;
+
+    height: auto;
+    border-radius: $border-radius-base;
+
+    border: 1px solid color(Gray-02);
+    background-color: #fff;
+
+    &-select {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        appearance: none;
+
+        cursor: pointer;
+    }
+
+    &-icon {
+        @include absolute(50%, 0.5rem);
+        // @include wh(10, 6);
+        transform: translateY(-50%);
+
+        color: color("Gray-04");
+    }
+}

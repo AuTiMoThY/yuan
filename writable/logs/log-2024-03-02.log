@@ -1,0 +1,92 @@
+ERROR - 2024-03-02 22:21:33 --> Error connecting to the database: mysqli_sql_exception: 無法連線，因為目標電腦拒絕連線。 in D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'yuan', 'q7PrToe3cYHL_o@...', 'yuan', 3306, '', 0)
+#1 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#4 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 D:\auproject\20231227-yuan\yuan-build-ci4\app\Controllers\Frontend\Form.php(93): CodeIgniter\BaseModel->save(Array)
+#9 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(941): App\Controllers\Frontend\Form->submitForm()
+#10 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+#11 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\auproject\20231227-yuan\yuan-build-ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: 無法連線，因為目標電腦拒絕連線。 in D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#3 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#4 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#5 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#6 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#7 D:\auproject\20231227-yuan\yuan-build-ci4\app\Controllers\Frontend\Form.php(93): CodeIgniter\BaseModel->save(Array)
+#8 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(941): App\Controllers\Frontend\Form->submitForm()
+#9 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+#10 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\auproject\20231227-yuan\yuan-build-ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-02 22:21:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: 無法連線，因為目標電腦拒絕連線。
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `forms` (`form_type`, `u_name`, `u_phone`, `u_budget`, `u_location`, `user_data`, `status`, `created_at`, `updated_at`) VALUES (:form_type:, :u_name:, :u_phone:, :u_budget:, :u_location:, :user_data:, :status:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Frontend\Form.php(93): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Frontend\Form->submitForm()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-02 22:21:57 --> Error connecting to the database: mysqli_sql_exception: 無法連線，因為目標電腦拒絕連線。 in D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'yuan', 'q7PrToe3cYHL_o@...', 'yuan', 3306, '', 0)
+#1 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#4 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 D:\auproject\20231227-yuan\yuan-build-ci4\app\Controllers\Frontend\Form.php(93): CodeIgniter\BaseModel->save(Array)
+#9 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(941): App\Controllers\Frontend\Form->submitForm()
+#10 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+#11 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\auproject\20231227-yuan\yuan-build-ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: 無法連線，因為目標電腦拒絕連線。 in D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#3 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#4 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#5 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#6 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#7 D:\auproject\20231227-yuan\yuan-build-ci4\app\Controllers\Frontend\Form.php(93): CodeIgniter\BaseModel->save(Array)
+#8 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(941): App\Controllers\Frontend\Form->submitForm()
+#9 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+#10 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\auproject\20231227-yuan\yuan-build-ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-02 22:21:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: 無法連線，因為目標電腦拒絕連線。
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `forms` (`form_type`, `u_name`, `u_phone`, `u_budget`, `u_location`, `user_data`, `status`, `created_at`, `updated_at`) VALUES (:form_type:, :u_name:, :u_phone:, :u_budget:, :u_location:, :user_data:, :status:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Frontend\Form.php(93): CodeIgniter\BaseModel->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Frontend\Form->submitForm()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Form))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,59 @@
+.admin_aside {
+    position: sticky;
+    top: 0;
+    background-color: color("main-color");
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    &-hd {
+        padding: 1rem;
+    }
+
+    &-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        flex: 1;
+    }
+
+    &-item {
+
+        a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1rem;
+            color: #fff;
+
+            transition: all 0.3s $easeInOutCubic3;
+
+            .new_window_icon {
+                position: absolute;
+                top: 50%;
+                right: 1.5rem;
+                translate: 0 -50%;
+            }
+
+
+            &:hover {
+                background-color: #fff;
+                color: color("main-color");
+            }
+        }
+        &.js-active {
+            a {
+                background-color: #fff;
+                color: color("main-color");
+            }
+        }
+    }
+
+    &-ft {
+        padding: 1rem;
+        align-self: center;
+    }
+}

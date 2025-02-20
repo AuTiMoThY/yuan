@@ -1,0 +1,72 @@
+INFO - 2025-01-17 19:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:52:01 --> ArgumentCountError: password_hash() expects at least 2 arguments, 1 given
+in APPPATH\Views\backend\login.php on line 46.
+ 1 APPPATH\Views\backend\login.php(46): password_hash(Object(SensitiveParameterValue))
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\auproject\\20231227-yuan\\yuan-build-ci4\\app\\Views\\backend\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('backend/login', [], true)
+ 5 APPPATH\Controllers\BaseController.php(89): view('backend/login', [...])
+ 6 APPPATH\Controllers\Backend\Login.php(24): App\Controllers\BaseController->renderView('backend/login', '登入')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Backend\Login->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-01-17 19:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-17 19:52:48 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'yuan'@'localhost' (using password: YES) in D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'yuan', Object(SensitiveParameterValue), 'yuan', 3306, '', 0)
+#1 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 D:\auproject\20231227-yuan\yuan-build-ci4\app\Controllers\Backend\Login.php(37): CodeIgniter\BaseModel->first()
+#7 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(941): App\Controllers\Backend\Login->getLogin()
+#8 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Login))
+#9 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\auproject\20231227-yuan\yuan-build-ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\auproject\20231227-yuan\yuan-build-ci4\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\auproject\20231227-yuan\yuan-build-ci4\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\auproject\20231227-yuan\yuan-build-ci4\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 D:\auproject\20231227-yuan\yuan-build-ci4\app\Controllers\Backend\Login.php(37): CodeIgniter\BaseModel->first()
+#6 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(941): App\Controllers\Backend\Login->getLogin()
+#7 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Login))
+#8 D:\auproject\20231227-yuan\yuan-build-ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\auproject\20231227-yuan\yuan-build-ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-01-17 19:52:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admins`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Backend\Login.php(37): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Backend\Login->getLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-01-17 19:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 21:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 21:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

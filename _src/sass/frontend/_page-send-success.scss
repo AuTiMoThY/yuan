@@ -1,0 +1,34 @@
+.page-send-success {
+
+    // @include media-down(576) {
+
+        height: calc(100vh - 90px);
+        @include media-down(576) {            
+            height: calc(100vh - 103px);
+        }
+        
+        .banner {
+            position: relative;
+            height: 100%;
+            background-image: url(../images/banner-bg.jpg);
+            background-repeat: repeat;
+            
+            @include media-down(576) {
+                background-image: url(../images/banner-bg-mb-2-.jpg);
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 6px;
+                    right: 6px;
+                    width: calc((175 / 375) * 100%);
+                    aspect-ratio: 350 / 350;
+                    background-image: url(../images/radio-line.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            
+        }
+    // }
+}

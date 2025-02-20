@@ -1,0 +1,258 @@
+$btn_main_color: "sub-color";
+
+.#{$PROJECT_NAME}_btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // width: 276px;
+    // height: 34px;
+    border-radius: 4px;
+    border: 1px solid color($btn_main_color);
+    background-color: rgba(color($btn_main_color), 1);
+
+    padding: 8px 56px;
+    // padding: 1rem - (1 * 0.25) 1.8rem - (1 * 0.25);
+
+    box-shadow: 0 0 0 rgba(#000, 0);
+    transition: background-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border 0.3s ease-in-out,
+        text-shadow 0.3s ease-in-out;
+
+    color: #fff;
+    // @include txt-("Btn");
+
+    cursor: pointer;
+
+    // @extend .font-small;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    &-s {
+        padding: 8px 16px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsla(0, 0%, 100%, 0.5), transparent 5vmin),
+            transparent;
+        background-attachment: fixed;
+        pointer-events: none;
+        mask:
+            linear-gradient(white, white) 50% 0 / 100% 2px no-repeat,
+            linear-gradient(white, white) 50% 100% / 100% 2px no-repeat,
+            linear-gradient(white, white) 0 50% / 2px 100% no-repeat,
+            linear-gradient(white, white) 100% 50% / 2px 100% no-repeat;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsla(0, 0%, 100%, 0.15), transparent 5vmin);
+        background-attachment: fixed;
+        opacity: var(--active, 0);
+        transition: opacity 0.2s;
+        pointer-events: none;
+    }
+
+
+    &:hover,
+    .js-hover & {
+        --active: 1;
+        border: 1px solid rgba(#000, 0);
+        // background-color: color($btn_main_color);
+        color: lighten(color($btn_main_color), 70%);
+        text-shadow: 0 0 4px rgba(#fff, 0.6);
+        text-decoration: none;
+        box-shadow: 0px 8px 20px rgba(color($btn_main_color), 0.5);
+    }
+
+
+    .icon {
+        // @include wh(16);
+
+        path {
+            fill: currentColor;
+        }
+
+        +.txt {
+            margin-left: 0.5rem;
+        }
+    }
+
+    .txt {
+
+
+        +.icon {}
+
+        &.txt {
+            margin-bottom: 0; // Elevate permissions
+        }
+    }
+
+
+
+    &:active {
+        transform: translate(1px, 1px);
+        box-shadow: $boxShadowActive1;
+    }
+
+    &:disabled {
+        background-color: color("Gray-04");
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+
+    @each $name,
+    $color in $color {
+        &-#{$name} {
+            @include btn_setting(color("#{$name}"), #fff);
+        }
+    }
+    // @each $name,
+    // $color in $colors {
+    //     &-#{$name} {
+    //         &.#{$PROJECT_NAME}_btn-nobg {
+    //             background-color: transparent;
+    //             color: $color;
+
+    //             &:hover,
+    //             .js-hover & {
+    //                 background-color: lighten($color, 10);
+    //                 color: #000;
+    //             }
+    //         }
+    //     }
+
+    // }
+
+
+    &-nobg {
+        background-color: transparent;
+        color: color("Gray-04");
+
+        &:hover,
+        .js-hover & {
+            // border-color: color("Brown");
+            // background-color: color("Brown");
+            color: color($btn_main_color);
+
+        }
+
+        .icon {
+            path {
+                fill: color($btn_main_color);
+            }
+        }
+    }
+
+    &-nobd {
+        border: none;
+    }
+
+    &-style1 {
+        padding: 8px;
+        background-color: transparent;
+        border: 1px solid rgba(#000, 0);
+        color: color($btn_main_color);
+
+        &:hover {
+            // border-color: color("Brown");
+            // background-color: color("Brown");
+            color: color($btn_main_color);
+
+        }
+    }
+
+    &-reverse {
+        // border-color: transparent;
+        // background-color: #fff;
+        // color: color($btn_main_color);
+    }
+
+    &-white {
+        border-color: transparent;
+        background-color: #fff;
+        color: color($btn_main_color);
+        box-shadow: 0px 8px 20px rgba(20, 162, 209, 0);
+
+        &:hover {
+            background-color: #fff;
+            color: color($btn_main_color);
+            box-shadow: 0px 8px 20px rgba(20, 162, 209, 0.5);
+        }
+    }
+
+    // &-border {
+    //     background-color: rgba(color($btn_main_color), 0);
+    //     border: 1px solid color($btn_main_color);
+    //     color: color($btn_main_color);
+
+    //     &:hover {
+    //         background-color: rgba(color($btn_main_color), 1);
+    //         color: #fff;
+    //         text-decoration: none;
+    //     }
+    // }
+
+    &.load-more {
+        height: auto;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: transparent;
+        border: none;
+        color: #1a1a1a;
+    }
+
+
+    // &-default {
+    // 	@include btn_setting(#3E3A39, #fff);
+    // }
+
+    // &-orange {
+    // 	@include btn_setting(#EB663D, #fff);
+    // }
+
+    // &-blue {
+    // 	@include btn_setting(#1D2974, #fff);
+    // }
+
+    // &-gray {
+    // 	@include btn_setting(#716C6B, #fff);
+    // }
+
+    // &-purple {
+    // 	@include linear-gradient(to bottom right, #c89feb, #5d69be);
+    // 	color: lighten(#5d69be, 40);
+
+    // 	&:hover {
+    // 		@include linear-gradient(to bottom right, darken(#c89feb, 15), darken(#5d69be, 15));
+    // 		color: lighten(#5d69be, 50);
+    // 	}
+    // }
+    // &-green {
+    // 	@include linear-gradient(to bottom right, $green-lighten-1, $green-darken-4);
+    // 	color: $green-lighten-4;
+
+    // 	&:hover {
+    // 		@include linear-gradient(to bottom right, darken($green-lighten-1, 15), darken($green-darken-4, 15));
+    // 		color: $green-lighten-5;
+    // 	}
+    // }
+    // &-red {
+    // 	@include linear-gradient(to bottom right, $red-lighten-1, $red-darken-4);
+    // 	color: $red-lighten-4;
+
+    // 	&:hover {
+    // 		@include linear-gradient(to bottom right, darken($red-lighten-1, 15), darken($red-darken-4, 15));
+    // 		color: $red-lighten-5;
+    // 	}
+    // }
+}

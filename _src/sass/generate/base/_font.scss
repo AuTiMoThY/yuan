@@ -1,0 +1,97 @@
+body {
+    font-family: "Noto Serif TC", serif;
+}
+
+.font-h1 {
+    font-size: var(--font-h1);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+
+    line-height: #{responsive-clamp(75, 35)};
+    
+
+    // @include media-down(768) {
+    //     line-height: 60px;
+    // }
+    // @include media-down(576) {
+    //     line-height: 45px;
+    // }
+    // @include media-down(375) {
+    //     line-height: 35px;
+    // }
+}
+.font-h2 {
+    font-size: var(--font-h2);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: #{responsive-clamp(75, 22)};
+
+    // @include media-down(768) {
+    //     line-height: 60px;
+    // }
+    // @include media-down(576) {
+    //     line-height: 45px;
+    // }
+    // @include media-down(375) {
+    //     line-height: 22px;
+    // }
+}
+.font-h3 {
+    font-size: var(--font-h3);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: #{responsive-clamp(75, 22)};
+
+    // @include media-down(768) {
+    //     line-height: 60px;
+    // }
+    // @include media-down(576) {
+    //     line-height: 45px;
+    // }
+    // @include media-down(375) {
+    //     line-height: 22px;
+    // }
+}
+
+.font-body {
+    font-size: var(--font-body);
+    font-weight: normal;
+    // line-height: 43px;
+    line-height: #{responsive-clamp(43, 25)};
+
+
+    // @include media-down(768) {
+    //     line-height: 30px;
+    // }
+
+    // @include media-down(375) {
+    //     line-height: 25px;
+    // }
+}
+
+.font-small {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: var(--font-small);
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    // line-height: 43px;
+    line-height: #{responsive-clamp(43, 25)};
+
+    // @include media-down(768) {
+    //     line-height: 30px;
+    // }
+    // @include media-down(375) {
+    //     line-height: 25px;
+    // }
+}
+
+@each $name, $color in $color {
+	.txt-#{$name} {
+		color: $color;
+	}
+}
+
+
+.txt-white {
+    color: #fff;
+}

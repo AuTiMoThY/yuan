@@ -1,0 +1,29 @@
+#questionDetails {
+    border: 2px solid #e3e3e3;
+}
+.question-container {
+    display: flex;
+    align-items: stretch;
+    // border: 1px solid color(main-color);
+
+    &:not(:first-of-type) {
+        border-top: 1px solid #e3e3e3;
+    }
+}
+
+.question-title {
+    flex: 1 1 40%;
+
+    padding: 16px;
+
+    background-color: color(Gray-01);
+    color: color(main-color);
+    .small {
+        font-size: 14px;
+    }
+}
+
+.question-value {
+    flex: 1 1 60%;
+    padding: 16px;
+}

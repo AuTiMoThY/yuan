@@ -1,0 +1,129 @@
+.page_heading {
+    position: relative;
+    width: 100%;
+    height: responsive-clamp(500, 180);
+    // aspect-ratio: 1920 / 500;
+
+    color: #fff;
+
+    // @include media-down(768) {
+    //     height: auto;
+    // }
+
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: responsive-clamp(20, 5);
+
+        padding-top: responsive-clamp(250, 100);
+        padding-bottom: responsive-clamp(70, 0);
+        // height: 100%;
+        // padding-top: 250px - 87px;
+
+        // @include media-down(768) {
+        //     padding-top: 40px;
+        //     padding-bottom: 40px;
+        // }
+    }
+
+    .title {
+        font-size: responsive-clamp(35, 17);
+        line-height: responsive-clamp(50, 25);
+        // padding-top: 120px;
+
+        // @include media-down(768) {
+        //     font-size: 28px;
+        //     line-height: 48px;
+        // }
+        // @include media-down(375) {
+        //     padding-top: 70px;
+        // }
+    }
+
+    .txt {
+        font-size: responsive-clamp(22, 15);
+        line-height: responsive-clamp(31, 18);
+    }
+
+    .steps {
+        position: absolute;
+        // right: 0;
+        right: responsive-clamp(154, 37);
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        // @include media-down(768) {
+        //     bottom: 40px;
+        // }
+
+        @include media-down(576) {
+            gap: 6px;
+        }
+    }
+
+    .step {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+
+        @include media-down(576) {
+            width: 8px;
+            height: 8px;
+        }
+
+        // cursor: pointer;
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: color("sub-color");
+
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+
+            @include media-down(576) {
+                width: 4px;
+                height: 4px;
+            }
+    
+        }
+
+        &:not(:first-of-type) {
+            &::before {
+                position: absolute;
+                top: -13px;
+                left: 50%;
+                translate: calc(-50%) 0;
+                content: "";
+                display: block;
+                width: 1px;
+                height: 12px;
+                background-color: #fff;
+                @include media-down(576) {
+                    top: -7px;
+                    height: 6px;
+                }
+            }
+        }
+
+        &:hover,
+        &.active {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

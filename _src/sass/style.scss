@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* *****************************************/
+/*    css
+/*    V 20240115
+/*        by AuOzzy
+/******************************************/
+@use "sass:math";
+@import "core";
+
+// ********** COMPONENT START ********** //
+// @import "generate/components/btns";
+// @import "generate/components/m_menu";
+
+// ********** LAYOUT START ********** //
+@import "generate/layout/header";
+@import "generate/layout/footer";
+@import "generate/layout/container";
+
+
+// ********** frontend START ********** //
+@import "frontend/common/hover_effect";
+@import "frontend/common/link";
+@import "frontend/common/page_heading";
+@import "frontend/page-send-success";
+@import "frontend/home/logo";
+@import "frontend/home/banner";
+@import "frontend/home/form_entrance";
+@import "frontend/form_intro/intro";
+@import "frontend/form_stage/page-form";
+@import "frontend/form_stage/form_stage";
+@import "frontend/form_elements/form_label";
+@import "frontend/form_elements/form_input";
+@import "frontend/form_elements/form_select";
+@import "frontend/form_elements/range-wrap";
+@import "frontend/question/question";
+@import "frontend/question/question-item";
