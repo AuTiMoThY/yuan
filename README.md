@@ -33,6 +33,53 @@
 - MySQL
 - RESTful API
 
+
+## 💻 環境要求
+- PHP 8.1
+-- PHP intl 擴展已安裝並啟用`extension=intl`
+- MySQL 8.0
+- Node.js v22.11.0
+- npm v10.9.0
+
+## 🔧 安裝說明
+1. 下載專案
+```bash
+git clone https://github.com/AuTiMoThY/yuan.git
+cd yuan
+```
+
+2. 安裝依賴
+```bash
+npm install
+```
+
+3. 設定資料庫
+- 建立資料庫 `yuan`
+- 匯入資料表
+```bash
+# 將 database.sql 匯入到 MySQL
+mysql -u your_username -p yuan < database.sql
+```
+- 複製 `.env.example` 為 `.env` 並設定資料庫連線資訊
+```bash
+DB_HOST = localhost
+DB_USER = your_username
+DB_PASS = your_password
+DB_NAME = yuan
+```
+
+4. 啟動
+```bash
+gulp php
+```
+
+5. 訪問網站
+```bash
+http://localhost:8100
+```
+
+
+
 ## 📸 系統展示
 ### 前台首頁
 ![首頁](https://demo.auozzy.com/picture/yuan-index.jpg)

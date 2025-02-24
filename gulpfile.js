@@ -10,6 +10,8 @@ const output = {
 const sassVar = {
     PROJECT_NAME: 'yuan',
 }
+
+const port = 8100;
 // 引入依賴
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
@@ -58,7 +60,7 @@ function watchSass() {
 function serveDefault() {
     browserSync.init({
         server: './public/',
-        port: "8100",
+        port: port,
     });
 
     gulp.watch([entry.sass], gulp.series(compileSASS));
@@ -68,13 +70,20 @@ function serveDefault() {
 // 開啟 PHP 伺服器並監控檔案
 function servePHP() {
     connectPHP.server({
+        // 設定伺服器的根目錄
+        base: `./public/`,
+        // 選擇一個不常用的埠以避免衝突
+        port: port,
+        // 保持伺服器開啟
+        keepalive: true,
+        // bin: 'D:\\PHP-8.2\\php.exe',
         bin: 'D:\\xampp\\php\\php.exe',
-        port: 8100,
-        base: `./public/`
     }, function () {
         browserSync.init({
-            port: 3002,
-            proxy: 'localhost:8100'
+            // 代理到剛剛啟動的 PHP 伺服器
+            proxy: 'localhost:' + port,
+            // 設定 browserSync 的監聽埠，避免與 PHP 伺服器埠衝突
+            port: 8201,
         });
     });
 
@@ -83,6 +92,7 @@ function servePHP() {
 
     // gulp.watch(['dist/*.php']).on('change', browserSync.reload);
 }
+
 
 
 exports.default = gulp.series(compileSASS, serveDefault);
